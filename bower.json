@@ -1,0 +1,21 @@
+{
+  "name": "sampleapp",
+  "description": "Sample application for node and express",
+  "main": "app.js",
+  "authors": [
+    "Glauco Fox"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/korbarn/nexp",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "bootstrap": "^3.3.6"
+  }
+}
