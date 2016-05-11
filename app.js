@@ -8,19 +8,18 @@ app.set('view engine', 'ejs');
 app.get('/', function(req,res){
     res.render('default', {
         title:'Home',
+        classname:'home',
         users:['Ray','Morten','James']
     }); // renders the default on views folder passing parameters
 });
 
-app.get('/me', function(req,res){
-   res.send('@glaucofox');
+app.get('/about', function(req,res){
+   res.render('default', {
+        title:'About Us',
+        classname: 'about'
+    }); 
 });
 
-app.get('/who/:name?/:title?', function(req,res){
-    var name = req.params.name;
-    var title = req.params.title;
-    res.send('<p>'+ title +' '+ name + ' was here.</p>');
-});
 
 app.get('*', function(req,res){
     res.send("<h1>404: Not Found</h1><p>Bad route request</p>");
