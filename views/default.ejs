@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" class="">
-<head>
-    <meta charset="UTF-8">
-    <title>My App</title>
-</head>
+<head><% include partials/page/head.ejs %></head>
 <body>
-    <h1><%= title %></h1>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-        Dolores expedita voluptatum ex neque ipsam, reprehenderit impedit? 
-        Nisi consequuntur voluptatum earum expedita hic dicta voluptas modi eveniet, ipsum, non delectus dolore!
-    </p>
-    
-    <ul>
-        <% for(var i =0; i<users.length;i++) {%>
-            <li><%= users[i] %></li>
-        <%}%>
-    </ul>
+    <% include partials/page/header.ejs %>
+    <div class="container">
+        <h1><%= title %></h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Dolores expedita voluptatum ex neque ipsam, reprehenderit impedit? 
+            Nisi consequuntur voluptatum earum expedita hic dicta voluptas modi eveniet, ipsum, non delectus dolore!
+        </p>
+
+        <ul>
+            <% for(var i =0; i<users.length;i++) {%>
+                <li><%= users[i] %></li>
+            <%}%>
+        </ul>
+    </div><!-- container -->
+    <% include partials/page/footer.ejs %>
+    <% include partials/page/jsdefaults.ejs %>
 </body>
 </html>
